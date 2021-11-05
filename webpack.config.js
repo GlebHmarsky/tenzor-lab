@@ -2,9 +2,27 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.join(__dirname, "src/html", "index.html"),
+  mode: 'development',
+  target: 'web',
+  
+  devServer: {
+    port: 8080,
+    liveReload: true,    
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "/src/html/", "index.html"),
+    })
+  ],
+  entry: {
+    path: path.join(__dirname, "/src/scripts/", "index.tsx")
+  },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].js',
+    assetModuleFilename: 'images/.[name][ext]',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    clean: true,
   },
   module: {
     rules: [
@@ -53,10 +71,8 @@ module.exports = {
       },
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html"),
-    }),
-  ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+  },
 
-}
+};
