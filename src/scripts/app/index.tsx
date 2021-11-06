@@ -1,11 +1,17 @@
-import { Box } from '@mui/system';
 import React from 'react';
+import Root from '../components/root';
+
+import { ThemeProvider as MuiThemeProvider } from '@mui/material';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme/main';
 
 const App = () => {
   return (
-    <Box className="App">
-      Hello!
-    </Box>
+    <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <Root />
+      </ThemeProvider>
+    </MuiThemeProvider>
   );
 }
 
