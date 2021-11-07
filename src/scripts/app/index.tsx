@@ -3,7 +3,7 @@ import Root from '../components/root';
 
 import { ThemeProvider as MuiThemeProvider } from '@mui/material';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './styles/theme/main';
+import theme from './styles/themes/main';
 
 const App = () => {
   return (

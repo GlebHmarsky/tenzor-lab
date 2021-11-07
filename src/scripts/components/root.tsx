@@ -1,45 +1,23 @@
 import React from "react"
 import {
-  Link, BrowserRouter, Switch,
+  BrowserRouter as Router,
+  Routes,
   Route,
-  Redirect,
-} from "react-router-dom"
+  Navigate,
+} from 'react-router-dom';
+import Profiles from "../features/page-profiles";
 
 const Root = () => {
   return (
-    <BrowserRouter>
-      <div>
-        <ul>
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
-          </li>
-        </ul>
-
-        <Switch>
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
-          <Route exact path="/about">
-            <h1>О программе</h1>
-          </Route>
-          <Route exact path="/topics">
-            <h1>Топпинг</h1>
-          </Route>
-          <Route exact path="/home">
-            <h1>Я дома!</h1>
-          </Route>
-          <Route >
-            <Redirect to="/home" />
-          </Route>
-        </Switch>
-      </div>
-    </BrowserRouter >
+    <Router>
+      <Routes>
+        <Route path="/">
+          <Route path="/" element={<Navigate to='/profiles' />} />
+          <Route path="profiles" element={<Profiles />} />
+          <Route path="404" element={<>{`404 Страница не найдена :(`}</>} />
+        </Route>
+      </Routes>
+    </Router >
   )
 }
 

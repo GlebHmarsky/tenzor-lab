@@ -6,8 +6,9 @@ module.exports = {
   target: 'web',
   
   devServer: {
-    port: 8080,
+    port: 2556,
     liveReload: true,    
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
