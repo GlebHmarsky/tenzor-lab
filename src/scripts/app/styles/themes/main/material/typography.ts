@@ -32,9 +32,7 @@ const typography: TypographyOptions = {
   fontWeightLight: 200,
   fontWeightRegular: 400,
   fontWeightMedium: 600,
-  // fontWeightSemibold: 700, //TODO: resarch for using costom theme?
   fontWeightBold: 800,
-  // fontWeightHeavy: 900,
 };
 
-export default typography;
+export default typography

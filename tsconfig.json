@@ -9,7 +9,13 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": false,
-    "jsx": "react"
+    "jsx": "react",
+    "paths": {      
+      "features/*": ["./src/script/features/*"],
+      "assets/*": ["./src/assets/*"],      
+      "themes/*": ["./src/script/app/styles/themes/*"],
+      "src/*": ["./src/*"]
+    },
   },
   "include": [
     "src",

@@ -5,10 +5,12 @@ import ProfilesList from "./controls/body"
 
 const Profiles = () => {
   return (
-    <Grid container flexDirection='column' justifyContent='center'>
-      <Grid item md={7} xs={11}>
-        <Header />
-        <ProfilesList/>
+    <Grid container flexDirection='column' alignContent='center'>
+      <Grid item sm={7} xs={11}>
+        <Grid container>
+          <Header />
+          <ProfilesList />
+        </Grid>
       </Grid>
     </Grid>
   )

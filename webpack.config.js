@@ -4,10 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   target: 'web',
-  
+
   devServer: {
     port: 2556,
-    liveReload: true,    
+    liveReload: true,
     historyApiFallback: true
   },
   plugins: [
@@ -48,7 +48,10 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+        ],
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
@@ -74,6 +77,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    alias: {
+      features: path.resolve(__dirname, 'src/script/features'),
+      assets: path.resolve(__dirname, 'src/assets'),
+      themes: path.resolve(__dirname, 'src/script/app/styles/themes'),
+      src: path.resolve(__dirname, 'src'),
+    },
   },
 
 };

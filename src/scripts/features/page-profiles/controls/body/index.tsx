@@ -1,4 +1,4 @@
-import { Box, Card, Grid, Typography } from "@mui/material"
+import { Card, Grid, Typography } from "@mui/material"
 import React from "react"
 
 const cards: {
@@ -23,8 +23,10 @@ const ProfilesList = () => {
         return (
           <Grid key={i} item md={6} xs={12}>
             <Card>
-              {card.name}
-              {card.descrition}
+              <Typography variant="subtitle1" >
+                {card.name}
+                {card.descrition}
+              </Typography>
             </Card>
           </Grid>
         )
