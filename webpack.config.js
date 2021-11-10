@@ -6,14 +6,16 @@ module.exports = {
   target: 'web',
 
   devServer: {
-    port: 2556,
+    contentBase: './dist',
+    port: 8080,
     liveReload: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "/src/html/", "index.html"),
-    })
+    }),
   ],
   entry: {
     path: path.join(__dirname, "/src/scripts/", "index.tsx")
@@ -25,6 +27,7 @@ module.exports = {
     publicPath: '/',
     clean: true,
   },
+
   module: {
     rules: [
       {
@@ -47,10 +50,11 @@ module.exports = {
         use: ['html-loader'],
       },
       {
-        test: /\.css$/i,
+        test: /\.(scss|css|sass)$/,
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
+          { loader: 'sass-loader' },
         ],
       },
       {
@@ -75,6 +79,7 @@ module.exports = {
       },
     ]
   },
+
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {
