@@ -13,6 +13,6 @@ const App = () => {
       </ThemeProvider>
     </MuiThemeProvider>
   );
-}
+};
 
 export default App;

@@ -35,4 +35,4 @@ const typography: TypographyOptions = {
   fontWeightBold: 800,
 };
 
-export default typography
+export default typography;
