@@ -103,8 +103,6 @@ export default {
       api: path.resolve(__dirname, 'src/script/api'),
       style: path.resolve(__dirname, 'src/style'),
       utils: path.resolve(__dirname, 'src/script/utils'),
-
-      
     },
   },
   /* when you run `npm start`, that is where source is taken from */

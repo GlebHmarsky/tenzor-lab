@@ -1,17 +1,33 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "outDir": "./dist/",
     "jsx": "react",
     "paths": {
-      "features/*": ["src/script/features/*"],
-      "assets/*": ["src/assets/*"],
-      "themes/*": ["src/script/app/styles/themes/*"],
-      "src/*": ["src/*"],
-      "components/*": ["src/script/components/*"],
-      "api/*": ["src/script/api/*"],
-      "style/*": ["src/style/*"],
-      "utils/*": ["src/script/utils/*"],     
+      "features/*": [
+        "src/script/features/*"
+      ],
+      "assets/*": [
+        "src/assets/*"
+      ],
+      "themes/*": [
+        "src/script/app/styles/themes/*"
+      ],
+      "src/*": [
+        "src/*"
+      ],
+      "components/*": [
+        "src/script/components/*"
+      ],
+      "api/*": [
+        "src/script/api/*"
+      ],
+      "style/*": [
+        "src/style/*"
+      ],
+      "utils/*": [
+        "src/script/utils/*"
+      ]
     },
     "noImplicitAny": true,
     "sourceMap": true,
@@ -24,5 +40,7 @@
     "moduleResolution": "node",
     "strict": true
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ],
 }

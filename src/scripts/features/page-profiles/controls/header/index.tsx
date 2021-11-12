@@ -1,12 +1,14 @@
-import { Typography } from '@mui/material';
-import { Box } from '@mui/system';
 import React from 'react';
+import TensorLogo from 'assets/TLogo.svg'
+import TensorSchool from 'assets/TENSOR SCHOOL.svg'
+import { Grid } from '@mui/material';
 
 const Header = () => {
   return (
-    <Box py={3}>
-      <Typography variant="subtitle1">Hello there!</Typography>
-    </Box>
+    <Grid container py={8} flexDirection="row" wrap="nowrap" alignItems="center">
+      <img src={TensorLogo} alt='Tensor school' height={70} />
+      <img src={TensorSchool} alt='Tensor school' height={40} />
+    </Grid>
   );
 };
 
