@@ -9,7 +9,7 @@ const palette: PaletteOptions = {
     main: '#7892C9',
   },
   secondary: {
-    main: '#EEEEFF',
+    main: '#7A91B5',
   },
   text: {
     primary: '#252639',

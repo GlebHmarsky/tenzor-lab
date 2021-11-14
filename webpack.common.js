@@ -24,7 +24,7 @@ export default {
      * there was a loader for bootstrap, now it's move on
      *
      */
-    // vendor: './src/script/vendor.ts',
+    // vendor: './src/scripts/vendor.ts',
   },
   /* Enable source maps for bundled files */
   devtool: 'inline-source-map',
@@ -94,15 +94,15 @@ export default {
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {
-      features: path.resolve(__dirname, 'src/script/features'),
+      features: path.resolve(__dirname, 'src/scripts/features'),
       assets: path.resolve(__dirname, 'src/assets'),
-      themes: path.resolve(__dirname, 'src/script/app/styles/themes'),
+      themes: path.resolve(__dirname, 'src/scripts/app/styles/themes'),
       src: path.resolve(__dirname, 'src'),
 
-      components: path.resolve(__dirname, 'src/script/components'),
-      api: path.resolve(__dirname, 'src/script/api'),
+      components: path.resolve(__dirname, 'src/scripts/components'),
+      api: path.resolve(__dirname, 'src/api'),
       style: path.resolve(__dirname, 'src/style'),
-      utils: path.resolve(__dirname, 'src/script/utils'),
+      utils: path.resolve(__dirname, 'src/scripts/utils'),
     },
   },
   /* when you run `npm start`, that is where source is taken from */

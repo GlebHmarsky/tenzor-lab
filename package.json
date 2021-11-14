@@ -10,6 +10,7 @@
     "lint-staged": "lint-staged",
     "build": "webpack --config webpack.prod.js",
     "start": "webpack serve --open --config webpack.dev.js",
+    "start-json-server": "npx json-server --watch data/profiles.json",
     "pretify": "npx prettier . --write"
   },
   "keywords": [],
@@ -28,14 +29,14 @@
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/test/mocks/styleMock.ts",
       "\\.(png|jpg|svg)$": "<rootDir>/test/mocks/fileMock.ts",
-      "^components/(.*)$": "<rootDir>/src/script/components/$1",
-      "^api/(.*)$": "<rootDir>/src/script/api/$1",
-      "^features/(.*)$": "<rootDir>/src/script/features/$1",
+      "^components/(.*)$": "<rootDir>/src/scripts/components/$1",
+      "^api/(.*)$": "<rootDir>/src/api/$1",
+      "^features/(.*)$": "<rootDir>/src/scripts/features/$1",
       "^assets/(.*)$": "<rootDir>/src/assets/$1",
-      "^themes/(.*)$": "<rootDir>/src/script/app/styles/themes/$1",
+      "^themes/(.*)$": "<rootDir>/src/scripts/app/styles/themes/$1",
       "^src/(.*)$": "<rootDir>/src/$1",
       "^style/(.*)$": "<rootDir>/src/style/$1",
-      "^utils/(.*)$": "<rootDir>/src/script/utils/$1"
+      "^utils/(.*)$": "<rootDir>/src/scripts/utils/$1"
     },
     "setupFilesAfterEnv": [
       "<rootDir>/test/prepareTestEnvironment.ts"
@@ -122,6 +123,7 @@
     "@types/testing-library__jest-dom": "^5.14.1",
     "@types/validator": "^13.6.3",
     "animate.css": "^4.1.1",
+    "axios": "^0.24.0",
     "buffer": "^5.7.1",
     "dotenv": "^10.0.0",
     "dotenv-webpack": "^7.0.3",
@@ -129,6 +131,7 @@
     "get-user-locale": "^1.4.0",
     "html-react-parser": "^1.2.7",
     "jest-styled-components": "^7.0.5",
+    "json-server": "^0.17.0",
     "libphonenumber-js": "^1.9.23",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
