@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchProfiles } from './thunk';
 
-const initialState: SlicesDefinitions.IApiSliceState<(Components.IProfiles[])> =
+const initialState: SlicesDefinitions.IApiSliceState<(Components.IProfile[])> =
   {
     apiStatus: 'None',
     data: [],

@@ -2,7 +2,7 @@ import { Card, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { CardTextTypography, ProfileCard } from './styled';
 
-const ProfilesList = ({ profiles }: { profiles: Components.IProfiles[] }) => {
+const ProfilesList = ({ profiles }: { profiles: Components.IProfile[] }) => {
   return (
     <Grid
       container
@@ -48,11 +48,29 @@ const ProfilesList = ({ profiles }: { profiles: Components.IProfiles[] }) => {
                 <Grid item>
                   <CardTextTypography
                     variant="h6"
-                    lineHeight="1.2"
+                    lineHeight="1.4"
                   >
                     {profile.name}
                   </CardTextTypography>
-                  <Typography variant="body2">{profile.description}</Typography>
+                  <Grid container spacing={1.5}>
+                    <Grid item>
+                      <Typography
+                        variant="body2"
+                        fontSize="0.85rem"
+                        color="text.secondary"
+                      >
+                        {profile.description}
+                      </Typography>
+                    </Grid>
+                    {/* <Grid item>
+                      <Typography
+                        variant="body2"
+
+                      >
+                        {profile.city}
+                      </Typography>
+                    </Grid> */}
+                  </Grid>
                 </Grid>
               </Grid>
             </ProfileCard>

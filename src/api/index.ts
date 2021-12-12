@@ -52,8 +52,23 @@ class API {
     }
   }
 
+  private async doPost<T = any>(...args: Parameters<typeof doPost>) {
+    try {
+      const response = (await doPost(...args)).data as T;
+      return response;
+    } catch (e) {
+      console.log(e);
+      throw e;
+    }
+  }
+
   public getProfiles = async () => {
-    const response = await this.doGet<Components.IProfiles[]>('/data');
+    const response = await this.doGet<Components.IProfile[]>('/data');
+    return response;
+  };
+
+  public createUser = async (object: Components.ICreateProfile) => {
+    const response = await this.doPost('/data', object);
     return response;
   };
 }

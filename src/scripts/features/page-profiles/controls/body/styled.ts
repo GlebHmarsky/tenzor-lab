@@ -4,8 +4,10 @@ import theme from "themes/main";
 
 export const ProfileCard = styled(Card)`
   box-shadow: ${theme.shadows[0]};
+  transition: 0.7s ;
   &:hover{
     box-shadow: ${theme.shadows[1]};
+    transition: 0.2s ;
   }
 `;
 
